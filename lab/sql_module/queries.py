@@ -66,7 +66,7 @@ def wines_by_region_climate() -> str:
     return """
         SELECT
             r.climate,
-            COUNT(w.name) AS total_wines,
+            COUNT(w.region) AS total_wines,
             AVG(w.rating) AS avg_rating
         FROM regions AS r
         LEFT JOIN wines AS w
